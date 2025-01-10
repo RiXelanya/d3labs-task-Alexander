@@ -9,6 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "alchemy-sdk": "^3.5.0"
+    "alchemy-sdk": "^3.5.0",
+    "dotenv": "^16.4.7",
+    "ethereum-block-by-date": "^1.5.0",
+    "ethers": "^6.13.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5"
   }
 }
