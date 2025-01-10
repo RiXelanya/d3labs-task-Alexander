@@ -16,8 +16,6 @@ const config = {
 };
 const alchemy = new Alchemy(config);
 
-const block = "latest";
-
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -25,10 +23,8 @@ function sleep(ms) {
 const main = async () => {
   const address =
     process.env.Contract ?? "0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D";
-  console.log(process.argv[2]);
   const epochs = Date(process.argv[2]) ?? Date.now();
-  const blocks = await dater.getDate(epochs);
-  console.log(blocks);
+  const { block } = await dater.getDate(epochs);
 
   // Block number or height
   const options = {
