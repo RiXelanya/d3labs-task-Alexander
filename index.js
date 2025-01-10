@@ -23,7 +23,7 @@ function sleep(ms) {
 const main = async () => {
   const address =
     process.env.Contract ?? "0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D";
-  const epochs = Date(process.argv[2]) ?? Date.now();
+  const epochs = process.argv[2] ? Date(process.argv[2]) : Date.now();
   const { block } = await dater.getDate(epochs);
 
   // Block number or height
